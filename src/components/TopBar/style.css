@@ -1,0 +1,16 @@
+.top-bar {
+    height: 5%;
+    width: 100%;
+    /* border-bottom: 1px solid black; */
+    position: relative;
+}
+
+.top-bar img {
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%)
+}
