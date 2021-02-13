@@ -1,16 +1,77 @@
 .top-bar {
-    height: 5%;
+    height: 8%;
     width: 100%;
-    /* border-bottom: 1px solid black; */
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-.top-bar img {
-    height: 80%;
-    margin: auto;
-    position: absolute;
-    margin: auto;
-    top: 50%;
-    right: 50%;
-    transform: translateX(50%) translateY(-50%)
+.top-list {
+    height: 100%;
+    margin-inline: 10%;
+    list-style-type:none;
 }
+
+.item {
+    float: left;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.item a {
+    color: #DE5D83;
+    text-shadow: -1px 0 #FFFBF5, 0 1px #FFFBF5, 1px 0 #FFFBF5, 0 -1px #FFFBF5;
+    font-weight:500;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+/*TODO ADD NEW CENTER CLASS*/
+
+
+.rotate {
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+.line-other {
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-delay: 0.2s;
+    transition: 1s;
+    box-shadow: 0 1px #FFFBF5;
+}
+
+.no-see {
+    stroke-dasharray: 140%;
+    stroke-dashoffset: 0;
+
+    animation: back 1.2s linear forwards;
+}
+
+.see {
+    stroke-dasharray: 140%;
+    stroke-dashoffset: 140%;
+    animation: forward 1.2s linear forwards;
+  }
+  
+  @keyframes forward {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes back {
+    to {
+      stroke-dashoffset: 140%;
+    }
+  }

@@ -1,0 +1,21 @@
+.tech-icons {
+    height: 50%;
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+    background: chartreuse;
+}
+
+img {
+    align-self: center;
+    justify-self: center;
+}
+
+.big-img {
+    width: 80%;
+    height: 80%;
+}
+
+.small-img {
+    width: 50%;
+    height: 50%;
+}

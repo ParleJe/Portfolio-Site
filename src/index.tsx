@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import TopBar from './components/TopBar';
-import MainComponent from './components/MainComponent'
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Technologies from './components/Technologies';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <TopBar />
-    <MainComponent/>
-    <TopBar />
+    <About />
+    <Technologies />
+    <Projects />
+    <Contact />
   </React.StrictMode>,
   document.getElementById('root')
 );
