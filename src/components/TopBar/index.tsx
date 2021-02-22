@@ -5,9 +5,14 @@ import Technologies from './graphics/settings.svg'
 import Projects from './graphics/visibility.svg'
 import Contact from './graphics/envelope.svg'
 import {useIsComponentScrolled} from './hooks';
-import { useState } from 'react';
+import { useState, RefObject } from 'react';
+import {refObj} from '../Site'
+interface Props {
+    refs: refObj,
+    handler: Function
+}
 
-const TopBar = () => {
+const TopBar = ({refs, handler}: Props) => {
     const isScrolled: boolean = useIsComponentScrolled(window.screen.height*0.01);
     const [clicked, setClicked] = useState(false);
     const isMenuVisible = clicked || !isScrolled;
@@ -30,16 +35,16 @@ const TopBar = () => {
         <div className="top-bar">
             <ol className="top-list">
                 <li className="item with-text" style={fullStyle}>
-                    <a href="*">
+                    <div className="link" onClick={()=> handler(refs.about)}>
                     <pre>About</pre>
                     <img src={About}/>
-                    </a>
+                    </div>
                 </li>
                 <li className="item with-text" style={fullStyle}>
-                    <a href="*">
+                    <div className="link" onClick={()=> handler(refs.technologies)}>
                         <pre>Technologies</pre>
                         <img src={Technologies}/>
-                    </a>
+                    </div>
                 </li>
                 <li className="item" style={background()} onClick={() => setClicked(!clicked)}>
                     <div className="topbar-outer-logo-container">
@@ -47,16 +52,16 @@ const TopBar = () => {
                     </div>
                 </li>
                 <li className="item with-text" style={fullStyle}>
-                    <a href="*">
+                    <div className="link" onClick={()=> handler(refs.project)}>
                         <pre>Projects</pre>
                         <img src={Projects}/>
-                    </a>
+                    </div>
                 </li>
                 <li className="item with-text" style={fullStyle}>
-                    <a href="*">
+                    <div className="link" onClick={()=> handler(refs.contact)}>
                         <pre>Contact</pre>
                         <img src={Contact}/>
-                    </a>
+                    </div>
                 </li>
 
             </ol>
