@@ -1,5 +1,7 @@
 import './style.css';
 import {useState} from 'react';
+import { isPropertyAccessExpression } from 'typescript';
+import { checkPropTypes } from 'prop-types';
 
 
 function useForceUpdate(){
@@ -19,9 +21,11 @@ const shuffle = (array: Array<any>) => {
 
 const colors: Array<string> = ['highlight1-color', 'highlight2-color', 'highlight3-color', 'background-color', 'font-color'];
 
-const Logo = ({rotate}:any) => {
-    
-    
+interface Props {
+    rotate: boolean,
+}
+
+const Logo = ({rotate}: Props) => {
     const forceUpdate = useForceUpdate();
     const style = () => {
         if(rotate){
@@ -31,21 +35,24 @@ const Logo = ({rotate}:any) => {
         return {transition: '1.2s'};
     }
 
+    let actualColors: Array<any> = colors;
+    
     return (
         <div className="logo-container" style={style()}>
-            <div className={"small-square "+colors[1]} onClick={() => {shuffle(colors); forceUpdate()}}/>
-            <div className={"small-square "+colors[2]}/>
-            <div className={"small-square "+colors[0]}/>
+            <div className={"small-square "+actualColors[1]} onClick={() => {shuffle(colors); forceUpdate()}}/>
+            <div className={"small-square "+actualColors[2]}/>
+            <div className={"small-square "+actualColors[0]}/>
 
-            <div className={"small-square "+colors[3]}/>
-            <div className={"small-square "+colors[4]}/>
-            <div className={"small-square "+colors[1]}/>
+            <div className={"small-square "+actualColors[3]}/>
+            <div className={"small-square "+actualColors[4]}/>
+            <div className={"small-square "+actualColors[1]}/>
 
-            <div className={"small-square "+colors[2]}/>
-            <div className={"small-square "+colors[0]}/>
-            <div className={"small-square "+colors[3]}/>
+            <div className={"small-square "+actualColors[2]}/>
+            <div className={"small-square "+actualColors[0]}/>
+            <div className={"small-square "+actualColors[3]}/>
         </div>
     )
 };
+
 
 export default Logo;

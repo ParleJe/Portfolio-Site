@@ -1,0 +1,68 @@
+form {
+    width: 70%;
+    height: 40%;
+}
+
+.form-grid {
+    height: 80%;
+    display: grid;
+    grid-template: repeat(5,1fr)/repeat(2,1fr);
+    gap: 0.5em;
+    padding-bottom: 1em;
+}
+
+.form-grid input,textarea {
+    box-sizing: border-box;
+    padding: 0.5em 0.3em;
+    
+    font-size: 0.8em;
+    width: 100%;
+    
+    background-color: #ccb596;
+    
+    font-weight: 500;
+    
+    border: none;
+    outline: none;
+}
+
+.form-grid input:focus,textarea:focus {
+    border-bottom: 2px solid red;
+    margin-bottom: -2px;
+    transition: 100ms ;
+}
+
+::placeholder {
+    color: black;
+    font-weight: 500;
+}
+
+#subject {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#message {
+    resize: none;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+button {
+    width: 40%;
+    height: 15%;
+    
+    font-size: 1.2em;
+    font-weight: 600;
+
+    background: transparent;
+    border: 1px solid #7298AD;
+    color: #7298AD;
+}
+
+.contact-paragraph {
+    width: 60%;
+}

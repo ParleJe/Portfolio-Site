@@ -1,0 +1,33 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-logo-container {
+    width: 14vmax;
+    height: 14vmax;
+    
+    animation:  anima 4s infinite alternate-reverse linear;
+}
+
+@keyframes anima {
+    0% {transform: scale(1) rotate(0deg);}
+    20% {transform: scale(1.2) rotate(72deg);}
+    40% {transform: scale(1) rotate(144deg);}
+    60% {transform: scale(1.2) rotate(216deg);}
+    80% {transform: scale(1) rotate(288deg);}
+    100% {transform: scale(1.2) rotate(360deg);}
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

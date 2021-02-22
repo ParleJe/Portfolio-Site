@@ -1,5 +1,9 @@
 import './style.css';
 import Logo from './../logo';
+import About from './graphics/name.svg'
+import Technologies from './graphics/settings.svg'
+import Projects from './graphics/visibility.svg'
+import Contact from './graphics/envelope.svg'
 import {useIsComponentScrolled} from './hooks';
 import { useState } from 'react';
 
@@ -15,30 +19,48 @@ const TopBar = () => {
         }
     }
 
+    const background = () => {
+        return {
+            background: isMenuVisible?'#FFFBF580':'transparent'
+        }
+    }
+
+    const fullStyle = {...visibilityStyle(),...background()};
     return (
         <div className="top-bar">
             <ol className="top-list">
-                <li className="item with-text" style={visibilityStyle()}>
-                    <a href="*">About</a>
+                <li className="item with-text" style={fullStyle}>
+                    <a href="*">
+                    <pre>About</pre>
+                    <img src={About}/>
+                    </a>
                 </li>
-                <li className="item with-text" style={visibilityStyle()}>
-                    <a href="*">Technologies</a>
+                <li className="item with-text" style={fullStyle}>
+                    <a href="*">
+                        <pre>Technologies</pre>
+                        <img src={Technologies}/>
+                    </a>
                 </li>
-                <li className="item" onClick={() => {
-                    if(isScrolled) setClicked(!clicked)}}>
-                    <Logo rotate={!isMenuVisible} />
+                <li className="item" style={background()} onClick={() => setClicked(!clicked)}>
+                    <div className="topbar-outer-logo-container">
+                        <Logo rotate={!isMenuVisible} />
+                    </div>
                 </li>
-                <li className="item with-text" style={visibilityStyle()}>
-                    <a href="*">Projects</a>
+                <li className="item with-text" style={fullStyle}>
+                    <a href="*">
+                        <pre>Projects</pre>
+                        <img src={Projects}/>
+                    </a>
                 </li>
-                <li className="item with-text" style={visibilityStyle()}>
-                    <a href="*">Contact</a>
+                <li className="item with-text" style={fullStyle}>
+                    <a href="*">
+                        <pre>Contact</pre>
+                        <img src={Contact}/>
+                    </a>
                 </li>
+
             </ol>
-            {/* <div className='line' style={{width: isMenuVisible?'90%':'0%'}}/>*/}
-            <svg width='100%'>
-                <line className={isMenuVisible?'see':'no-see'} x1="5%" x2='95%' stroke='black'/>
-            </svg>
+            <div className='line' style={{width: isMenuVisible?'100%':'0'}}/>
         </div>
     )
 };

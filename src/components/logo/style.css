@@ -1,6 +1,6 @@
 .logo-container {
-    width: 6vh;
-    height: 6vh;
+    width: inherit;
+    height: inherit;
 
     display: grid;
     grid-template: repeat(3,30%)/repeat(3,30%);
@@ -30,7 +30,8 @@
 }
 
 .highlight1-color {
-    background-color: #DE5D83;
+    background-color: #f3316b;
+    /*#de5d83*/
 }
 
 .background-color{
