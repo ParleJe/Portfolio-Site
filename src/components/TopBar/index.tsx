@@ -43,7 +43,7 @@ const TopBar = () => {
                 </li>
                 <li className="item" style={background()} onClick={() => setClicked(!clicked)}>
                     <div className="topbar-outer-logo-container">
-                        <Logo rotate={!isMenuVisible} />
+                        <Logo rotate={!isMenuVisible} animate={false} />
                     </div>
                 </li>
                 <li className="item with-text" style={fullStyle}>
