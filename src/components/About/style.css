@@ -6,6 +6,8 @@
     z-index: 0;
     
     background: #fffbf5;
+
+    position: relative;
 }
 
 .first-tab {

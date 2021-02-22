@@ -6,7 +6,7 @@ form {
 .segment-title {
     position: absolute;
     top: 10vh;
-    left: 1em;
+    left: 5%;
 
     font-size: 3em;
     font-weight: 800;
@@ -30,7 +30,7 @@ form {
 
 .form-grid input,textarea {
     box-sizing: border-box;
-    padding: 0.5em 0.3em;
+    padding: 0.5em 1em;
     
     font-size: 0.8em;
     width: 100%;
@@ -68,17 +68,7 @@ form {
     grid-row-end: 6;
 }
 
-button {
-    width: 40%;
-    height: 15%;
-    
-    font-size: 1.2em;
-    font-weight: 600;
 
-    background: transparent;
-    border: 1px solid #7298AD;
-    color: #7298AD;
-}
 
 .contact-paragraph {
     width: 60%;
