@@ -14,7 +14,7 @@ const Contact = () => {
     const [email, setEmail] = useState<string>('')
     const [subject, setSubject] = useState<string>('')
     const [text, setText] = useState<string>('')
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         threshold: 0.25
     })
     const [opacity, setOpacity] = useState(0);
