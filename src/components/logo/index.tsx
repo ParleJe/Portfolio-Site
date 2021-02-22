@@ -23,9 +23,10 @@ const colors: Array<string> = ['highlight1-color', 'highlight2-color', 'highligh
 
 interface Props {
     rotate: boolean,
+    animate: boolean,
 }
 
-const Logo = ({rotate}: Props) => {
+const Logo = ({rotate, animate}: Props) => {
     const forceUpdate = useForceUpdate();
     const style = () => {
         if(rotate){
@@ -38,7 +39,7 @@ const Logo = ({rotate}: Props) => {
     let actualColors: Array<any> = colors;
     
     return (
-        <div className="logo-container" style={style()}>
+        <div className={animate?"logo-container animate": "logo-container"} style={style()}>
             <div className={"small-square "+actualColors[1]} onClick={() => {shuffle(colors); forceUpdate()}}/>
             <div className={"small-square "+actualColors[2]}/>
             <div className={"small-square "+actualColors[0]}/>

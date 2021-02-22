@@ -11,7 +11,7 @@
     width: 14vmax;
     height: 14vmax;
     
-    animation:  anima 4s infinite alternate-reverse linear;
+    /* animation:  anima 4s infinite alternate-reverse linear; */
 }
 
 @keyframes anima {
@@ -21,13 +21,4 @@
     60% {transform: scale(1.2) rotate(216deg);}
     80% {transform: scale(1) rotate(288deg);}
     100% {transform: scale(1.2) rotate(360deg);}
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }

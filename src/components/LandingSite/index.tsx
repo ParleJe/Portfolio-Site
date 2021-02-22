@@ -6,7 +6,7 @@ const LandingSite = () => {
     return (
     <div className="main-container">
         <div className="outer-logo-container">
-            <Logo rotate={false}/>
+            <Logo rotate={false} animate={true}/>
         </div>
     </div>
     );
