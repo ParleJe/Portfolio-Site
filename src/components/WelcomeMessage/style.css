@@ -1,0 +1,47 @@
+.welcome-header {
+    width: 60%;
+    height: 100%;
+
+    box-sizing: border-box;
+    padding: 2em 0 0 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.welcome-header h1 {
+    width: fit-content;
+    margin-block-end: 0;
+    font-size: 8em;
+    font-weight: 700;
+}
+
+.welcome-header h2 {
+    width: fit-content;
+    margin-block-start: 0;
+    font-size: 2em;
+
+}
+
+.typewrite {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .05em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .02em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
