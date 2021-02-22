@@ -22,7 +22,7 @@ const Contact = () => {
     return (
         <div className="main-component" style={{opacity: opacity, transition: '1s'}}>
             <div className="left-panel">
-                <h1>Contact me</h1>
+                <h1 className="segment-title">Contact me</h1>
                 <p className="contact-paragraph">bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla

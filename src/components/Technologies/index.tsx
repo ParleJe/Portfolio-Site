@@ -3,9 +3,9 @@ import TechIcons from '../TechIcons';
 
 const Technologies = () => {
     return (
-        <div className="tech">
+        <div className="main-component">
             <div className="left-panel">
-                
+                <h1 className="segment-title">Technologies</h1>
             </div>
 
             <div className="right-panel">

@@ -3,6 +3,16 @@ form {
     height: 40%;
 }
 
+.segment-title {
+    position: absolute;
+    top: 10vh;
+    left: 1em;
+
+    font-size: 3em;
+    font-weight: 800;
+    text-decoration: overline;
+}
+
 .form-grid {
     height: 80%;
     display: grid;
