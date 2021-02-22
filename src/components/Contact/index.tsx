@@ -1,16 +1,19 @@
 import './style.css';
-import {FormEvent, useState, useEffect, useRef} from 'react';
+import {FormEvent, useState, useEffect} from 'react';
 import {useInView} from 'react-intersection-observer';
-const onSubmit = (event: FormEvent) => {
+import Logo from '../logo';
+
+
+const onSubmit = (event: FormEvent):void => {
     event.preventDefault();
     alert("Submitted")
 };
 
 const Contact = () => {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [subject, setSubject] = useState('')
-    const [text, setText] = useState('')
+    const [name, setName] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
+    const [subject, setSubject] = useState<string>('')
+    const [text, setText] = useState<string>('')
     const { ref, inView, entry } = useInView({
         threshold: 0.25
     })
@@ -21,12 +24,15 @@ const Contact = () => {
     },[inView])
     return (
         <div className="main-component" style={{opacity: opacity, transition: '1s'}}>
+            <h1 className="segment-title">Contact me</h1>
             <div className="left-panel">
-                <h1 className="segment-title">Contact me</h1>
                 <p className="contact-paragraph">bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                <div className="contact-logo-container">
+                    <Logo rotate={false} animate={true} />
+                </div>
             </div>
 
             <div className="right-panel">

@@ -13,6 +13,13 @@ form {
     text-decoration: overline;
 }
 
+.contact-logo-container {
+    width: 14vmin;
+    height: 14vmin;
+
+    margin: 10%;
+}
+
 .form-grid {
     height: 80%;
     display: grid;
