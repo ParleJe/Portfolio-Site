@@ -1,6 +1,6 @@
 
 import './style.css';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, CSSProperties} from 'react';
 
 interface Props {
     images: Array<any>,
@@ -10,8 +10,8 @@ interface Props {
 
 
 const PhotoDisplay = ({images, round, transitionTime}: Props) => {
-    const [index, setIndex] = useState(0);
-    const [style, setStyle] = useState({
+    const [index, setIndex] = useState<number>(0);
+    const [style, setStyle] = useState<CSSProperties>({
         opacity: images.length === 0?0:1 ,
         filter: 'unset',
     });
