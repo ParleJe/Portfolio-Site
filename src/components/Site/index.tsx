@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import ReactDOM from 'react-dom';
 import TopBar from '../TopBar';
 import About from '../About';
 import Projects from '../Projects';
@@ -11,7 +10,7 @@ const Site = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-            setTimeout(()=> setIsLoaded(!isLoaded), 3000)
+            setTimeout(()=> setIsLoaded(state => !state), 3000)
             //setIsLoaded(!isLoaded);
     },[])
 
