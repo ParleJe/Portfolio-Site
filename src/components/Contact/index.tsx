@@ -1,21 +1,54 @@
+
 import './style.css';
 import {FormEvent, useState, useEffect, RefObject} from 'react';
 import {useInView} from 'react-intersection-observer';
 import Logo from '../logo';
+import {env} from '../../config'
 
+declare const window: any;
 
-const onSubmit = (event: FormEvent):void => {
-    event.preventDefault();
-    alert("Submitted")
-};
+interface response{
+    status: number
+}
 
+interface feedback{
+    templateId: string,
+    email: string,
+    name: string,
+    subject: string,
+    text: string,
+    user: string,
+}
+
+const sendFeedback = async ({
+    templateId,
+    email,
+    name,
+    subject,
+    text,
+    user,
+}: feedback) => {
+    window.emailjs.send(
+        "default_service",
+        templateId,
+        {
+            name,
+            email,
+            subject,
+            text,
+        },
+        user
+        )
+        .catch(() => { alert('An error has occured. Please try again')});
+    };
+        
 interface Props {
     refLink: RefObject<any>
 }
 
 const Contact = ({refLink}: Props) => {
     const [name, setName] = useState<string>('')
-    const [email, setEmail] = useState<string>('')
+    const [email, setEmail] = useState<any>('')
     const [subject, setSubject] = useState<string>('')
     const [text, setText] = useState<string>('')
     const { ref, inView } = useInView({
@@ -23,9 +56,32 @@ const Contact = ({refLink}: Props) => {
     })
     const [opacity, setOpacity] = useState(0);
 
+    const onSubmit = (event: FormEvent) => {
+        event.preventDefault()
+    
+        const {
+            REACT_APP_EMAILJS_TEMPLATEID: templateId,
+            REACT_APP_EMAILJS_USERID: user,
+        } = env
+    
+        sendFeedback({
+            templateId,
+            email,
+            name,
+            subject,
+            text,
+            user
+        })
+        setName("");
+        setEmail("");
+        setSubject("");
+        setText("");
+    };
+
     useEffect( () => {
             setOpacity(inView?1:0)
     },[inView])
+    
     return (
         <div ref={refLink} className="main-component" style={{opacity: opacity, transition: '1s'}}>
             <h1 className="segment-title">Contact me</h1>
