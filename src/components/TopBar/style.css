@@ -29,7 +29,7 @@
     
 }
 
-.item a {
+.link {
     color: #DE5D83;
     font-weight:500;
     font-size: 1em;
@@ -37,28 +37,28 @@
     position: relative;
 }
 
-a img {
+.link img {
     height: 2em;
     opacity: 1;
     transition: 0.5s;
 }
 
-a pre {
+.link pre {
     opacity: 0;
     transition: 0.5s;
 }
 
-a:hover pre {
+.link:hover pre {
     opacity: 1;
     transition: 0.5s;
 }
 
-a:hover img {
+.link:hover img {
     opacity: 0;
     transition: 0.5s;
 }
 
-a img,pre {
+.link img,pre {
     position: absolute;
     top: 50%;
     right: 50%;
