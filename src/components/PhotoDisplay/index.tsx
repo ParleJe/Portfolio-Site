@@ -16,12 +16,20 @@ const PhotoDisplay = ({images, round, transitionTime}: Props) => {
         filter: 'unset',
     });
     
-    useEffect(() => {
-        if(images.length > 1 && transitionTime !== null){
-            setTimeout(() => setStyle({opacity: 0.4, filter: 'brightness(0) blur(2px)'}),transitionTime);
-            setTimeout(() => setStyle({opacity:1, filter: 'unset'}),transitionTime*1.15);
-            setTimeout(() => setIndex((index+1)%images.length),transitionTime*1.15);
-        }
+    useEffect(
+        () => {
+            if(images.length > 1 && transitionTime !== null){
+                const fadeOut = setTimeout(() => setStyle({opacity: 0.4, filter: 'brightness(0) blur(2px)'}),transitionTime);
+                const fadeIn = setTimeout(() => setStyle({opacity:1, filter: 'unset'}),transitionTime*1.15);
+                const changePhoto = setTimeout(() => setIndex((index+1)%images.length),transitionTime*1.15);
+
+                return () => {
+                    clearTimeout(fadeOut);
+                    clearTimeout(fadeIn);
+                    clearTimeout(changePhoto);
+                }
+            }
+    
     },[index, images.length, transitionTime]);
 
     return (
