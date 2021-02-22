@@ -1,5 +1,5 @@
 import './style.css';
-import {FormEvent, useState, useEffect} from 'react';
+import {FormEvent, useState, useEffect, RefObject} from 'react';
 import {useInView} from 'react-intersection-observer';
 import Logo from '../logo';
 
@@ -9,7 +9,11 @@ const onSubmit = (event: FormEvent):void => {
     alert("Submitted")
 };
 
-const Contact = () => {
+interface Props {
+    refLink: RefObject<any>
+}
+
+const Contact = ({refLink}: Props) => {
     const [name, setName] = useState<string>('')
     const [email, setEmail] = useState<string>('')
     const [subject, setSubject] = useState<string>('')
@@ -23,7 +27,7 @@ const Contact = () => {
             setOpacity(inView?1:0)
     },[inView])
     return (
-        <div className="main-component" style={{opacity: opacity, transition: '1s'}}>
+        <div ref={refLink} className="main-component" style={{opacity: opacity, transition: '1s'}}>
             <h1 className="segment-title">Contact me</h1>
             <div className="left-panel">
                 <p className="contact-paragraph">bla bla bla bla bla bla bla bla bla bla bla bla bla

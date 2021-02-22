@@ -1,5 +1,6 @@
 import './style.css';
 import PhotoDisplay from '../../PhotoDisplay';
+import { RefObject } from 'react';
 
 interface Props {
     imgs: Array<string>,
@@ -7,7 +8,7 @@ interface Props {
     description: string,
     name: string,
     git?: string,
-    live?: string
+    live?: string,
 }
 
 const ProjectCard = ({imgs, techs, name, description}: Props) => {

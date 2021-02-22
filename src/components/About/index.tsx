@@ -2,13 +2,18 @@ import './style.css';
 import Graphic1 from './graph-1.jpg';
 import Graphic2 from './graph-2.jpg';
 import PhotoDisplay from '../PhotoDisplay';
+import { RefObject } from 'react';
 
 const images: Array<string> = [Graphic1, Graphic2];
 
-const About = () => {
+interface Props {
+  refLink: RefObject<any>
+}
+
+const About = ({refLink}: Props) => {
   
   return (
-    <div className="main-component first-tab">
+    <div ref={refLink} className="main-component">
       <div className="left-panel">
         <div className="photo-container">
           <PhotoDisplay images={images} transitionTime={10000} />
