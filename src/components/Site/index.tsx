@@ -5,6 +5,7 @@ import Projects from '../Projects';
 import Contact from '../Contact';
 import Technologies from '../Technologies';
 import LandingSite from '../LandingSite';
+import WelcomeMessage from '../WelcomeMessage';
 
 const Site = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -20,6 +21,7 @@ const Site = () => {
         </div>)
     :   (<div>
             <TopBar />
+            <WelcomeMessage />
             <About />
             <Technologies />
             <Projects />
