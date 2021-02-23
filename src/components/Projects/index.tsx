@@ -18,19 +18,21 @@ const Projects = ({refLink}: Props) => {
     })
 
     return (
-        <div className="projects" ref={refLink} style={{opacity: inView?1:0.1, transition: '1s'}}>
+        <div className="main-component" ref={ref}>
             <h1 className="segment-title">Projects</h1>
-            <div style={{width: '70%', height: '60%', minWidth: '25vw', margin: 'auto'}}>
-                <ProjectCard imgs={[img, img2]} techs={[php, js]} description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut'
-                name='blablabla' />
-            </div>
-            <div ref={ref} style={{width: '80%', height: '70%', minWidth: '25vw', margin: 'auto'}}>
-                <ProjectCard imgs={[img, img2]} techs={[php, js]} description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut'
-                name='blablabla' />
-            </div>
-            <div style={{width: '70%', height: '60%', minWidth: '25vw', margin: 'auto'}}>
-                <ProjectCard imgs={[img, img2]} techs={[php, js]} description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut'
-                name='blablabla' />
+            <div className="projects first-panel" ref={refLink} style={{opacity: inView?1:0.1, transition: '1s'}}>
+                <div className="small-project">
+                    <ProjectCard imgs={[img, img2]} techs={[php, js]} description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut'
+                    name='blablabla' />
+                </div>
+                <div className="big-project">
+                    <ProjectCard imgs={[img, img2]} techs={[php, js]} description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut'
+                    name='blablabla' />
+                </div>
+                <div className="small-project">
+                    <ProjectCard imgs={[img, img2]} techs={[php, js]} description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut'
+                    name='blablabla' />
+                </div>
             </div>
         </div>
     )

@@ -7,10 +7,6 @@ import {env} from '../../config'
 
 declare const window: any;
 
-interface response{
-    status: number
-}
-
 interface feedback{
     templateId: string,
     email: string,
@@ -85,7 +81,7 @@ const Contact = ({refLink}: Props) => {
     return (
         <div ref={refLink} className="main-component" style={{opacity: opacity, transition: '1s'}}>
             <h1 className="segment-title">Contact me</h1>
-            <div className="left-panel">
+            <div ref={ref} className="smaller-panel first-panel">
                 <p className="contact-paragraph">bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -95,8 +91,8 @@ const Contact = ({refLink}: Props) => {
                 </div>
             </div>
 
-            <div className="right-panel">
-                <form onSubmit={onSubmit} ref={ref}>
+            <div className="bigger-panel">
+                <form onSubmit={onSubmit}>
                     <div className="form-grid">
                         <input id='name' name='name' type='text' placeholder='Name' required={true} value={name} onChange={(e) => setName(e.target.value)} />
                         <input id='email' name='email' type='email' placeholder='Email' required={true} value={email} onChange={(e) => setEmail(e.target.value)} />

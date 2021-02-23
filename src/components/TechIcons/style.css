@@ -1,33 +1,23 @@
 .tech-icons {
-    height: 50%;
-   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.exp-bar {
-    width: 20vw;
-    height: 1em;
-    margin-bottom: 2em;
-    border-radius: 0.125em;
-
-    background-color: transparent;
-    border: 1px solid black;
-}
-
-.exp-bar div {
-    height: inherit;
-    background-color: lawngreen;
-    transition: 1s;
-}
-
 .grid-layout {
-    height: 30vw;
-    width: 30vw;
+    height: 35vmax;
+    width: 35vmax;
     display: grid;
 
-    grid-template: repeat(3,1fr)/repeat(3,1fr);
-    gap: 2.5em;
+    grid-template: repeat(3,30%)/repeat(3,30%);
+    gap: 5%;
+    
+}
+
+@media only screen and (max-width:801px), only screen and (max-device-width:801px) {
+    .grid-layout {
+        height: 45vmax;
+        width: 45vmax;
+    }
 }

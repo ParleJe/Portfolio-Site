@@ -11,7 +11,7 @@ const WelcomeMessage = () => {
                     22 years old IT student
                 </h2>
             </div>
-            <div className="Welcome-outer-logo" style={{width: "35vmin", height: '35vmin'}}>
+            <div className="welcome-outer-logo">
                 <Logo rotate={false} animate={true} />
             </div>
         </div>
