@@ -5,9 +5,3 @@
     display: flex;
 
 }
-
-.right-panel {
-    position: relative;
-    flex-direction: column;
-}
-

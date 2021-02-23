@@ -85,9 +85,3 @@
     transition-delay: 0.2s;
     transition: 1s;
 }
-
-@media only screen and (max-width: 800px) {
-    .top-bar {
-        width: 100%;
-    }
-}

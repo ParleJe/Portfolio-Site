@@ -1,17 +1,4 @@
-form {
-    width: 70%;
-    height: 40%;
-}
 
-.segment-title {
-    position: absolute;
-    top: 10vh;
-    left: 5%;
-
-    font-size: 3em;
-    font-weight: 800;
-    text-decoration: overline;
-}
 
 .contact-logo-container {
     width: 14vmin;
@@ -67,9 +54,6 @@ form {
     grid-row-start: 3;
     grid-row-end: 6;
 }
-
-
-
 .contact-paragraph {
     width: 60%;
 }
