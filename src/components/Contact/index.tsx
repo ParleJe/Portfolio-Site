@@ -1,20 +1,12 @@
 
 import './style.css';
-import {FormEvent, useState, useEffect, RefObject} from 'react';
+import {FormEvent, useState, useEffect} from 'react';
 import {useInView} from 'react-intersection-observer';
 import Logo from '../logo';
 import {env} from '../../config'
+import {DefaultProps as Props, feedback} from '../../helpers/interfaces';
 
 declare const window: any;
-
-interface feedback{
-    templateId: string,
-    email: string,
-    name: string,
-    subject: string,
-    text: string,
-    user: string,
-}
 
 const sendFeedback = async ({
     templateId,
@@ -37,10 +29,6 @@ const sendFeedback = async ({
         )
         .catch(() => { alert('An error has occured. Please try again')});
     };
-        
-interface Props {
-    refLink: RefObject<any>
-}
 
 const Contact = ({refLink}: Props) => {
     const [name, setName] = useState<string>('')
@@ -81,7 +69,7 @@ const Contact = ({refLink}: Props) => {
     return (
         <div ref={refLink} className="main-component" style={{opacity: opacity, transition: '1s'}}>
             <h1 className="segment-title">Contact me</h1>
-            <div ref={ref} className="smaller-panel first-panel">
+            <div ref={ref} className="bigger-panel first-panel">
                 <p className="contact-paragraph">bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -91,7 +79,7 @@ const Contact = ({refLink}: Props) => {
                 </div>
             </div>
 
-            <div className="bigger-panel">
+            <div className="smaller-panel">
                 <form onSubmit={onSubmit}>
                     <div className="form-grid">
                         <input id='name' name='name' type='text' placeholder='Name' required={true} value={name} onChange={(e) => setName(e.target.value)} />

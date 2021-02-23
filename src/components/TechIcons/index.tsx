@@ -1,12 +1,12 @@
 import './style.css';
 import PhotoDisplay from '../PhotoDisplay';
-import react from './graphics/react.svg';
-import js from './graphics/javascript.svg';
-import html from './graphics/html.svg';
-import php from './graphics/php.svg';
-import css from './graphics/css.svg';
-import java from './graphics/java.svg';
-import ts from './graphics/typescript.svg';
+import react from '../../technologyIcons/react.svg';
+import js from '../../technologyIcons/javascript.svg';
+import html from '../../technologyIcons/html.svg';
+import php from '../../technologyIcons/php.svg';
+import css from '../../technologyIcons/css.svg';
+import java from '../../technologyIcons/java.svg';
+import ts from '../../technologyIcons/typescript.svg';
 
 const TechIcons = () => {
     return (

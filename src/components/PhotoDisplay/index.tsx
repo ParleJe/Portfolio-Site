@@ -1,15 +1,12 @@
 
 import './style.css';
 import {useState, useEffect, CSSProperties} from 'react';
-
-interface Props {
-    images: Array<any>,
-    round?: boolean,
-    transitionTime: number|null
-}
+import {PhotoDisplayProps} from '../../helpers/interfaces';
 
 
-const PhotoDisplay = ({images, round, transitionTime}: Props) => {
+
+
+const PhotoDisplay = ({images, round, transitionTime}: PhotoDisplayProps) => {
     const [index, setIndex] = useState<number>(0);
     const [style, setStyle] = useState<CSSProperties>({
         opacity: images.length === 0?0:1 ,

@@ -1,7 +1,6 @@
 import './style.css';
 import {useState} from 'react';
-import { isPropertyAccessExpression } from 'typescript';
-import { checkPropTypes } from 'prop-types';
+import {LogoProps} from '../../helpers/interfaces';
 
 
 function useForceUpdate(){
@@ -17,16 +16,9 @@ const shuffle = (array: Array<any>) => {
         array[i] = array[j];
         array[j] = temp;
     }
-  } 
-
+  }
 const colors: Array<string> = ['highlight1-color', 'highlight2-color', 'highlight3-color', 'background-color', 'font-color'];
-
-interface Props {
-    rotate: boolean,
-    animate: boolean,
-}
-
-const Logo = ({rotate, animate}: Props) => {
+const Logo = ({rotate, animate}: LogoProps) => {
     const forceUpdate = useForceUpdate();
     const style = () => {
         if(rotate){

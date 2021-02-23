@@ -1,5 +1,5 @@
-import './style.css';
-import Logo from '../logo';
+import "./style.css";
+import Logo from "../logo";
 
 const WelcomeMessage = () => {
     return (

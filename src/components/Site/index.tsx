@@ -1,27 +1,22 @@
-import React, {useState, useEffect, useRef, RefObject} from 'react';
-import TopBar from '../TopBar';
-import About from '../About';
-import Projects from '../Projects';
-import Contact from '../Contact';
-import Technologies from '../Technologies';
-import LandingSite from '../LandingSite';
-import WelcomeMessage from '../WelcomeMessage';
+import React, {useState, useEffect, useRef, RefObject} from "react";
+import TopBar from "../TopBar";
+import About from "../About";
+import Projects from "../Projects";
+import Contact from "../Contact";
+import Technologies from "../Technologies";
+import LandingSite from "../LandingSite";
+import WelcomeMessage from "../WelcomeMessage";
+import {RefLinksObj, SiteProps} from "../../helpers/interfaces";
 
-export interface refObj {
-        about: RefObject<any>,
-        project: RefObject<any>,
-        technologies: RefObject<any>,
-        contact: RefObject<any>,
-}
 
-const Site = () => {
+const Site = ({projects}: SiteProps) => {
     const [isLoaded, setIsLoaded] = useState<boolean>(false);
-    const projectRef = useRef<HTMLDivElement>(null);
-    const aboutRef = useRef<HTMLDivElement>(null);
-    const technologiesRef = useRef<HTMLDivElement>(null);
+    const projectRef = useRef<RefObject<any>>(null);
+    const aboutRef = useRef<RefObject<any>>(null);
+    const technologiesRef = useRef<RefObject<any>>(null);
     const contactRef = useRef<RefObject<any>>(null);
 
-    const refs: refObj = {
+    const refs: RefLinksObj = {
             about: aboutRef,
             project: projectRef,
             technologies: technologiesRef,
@@ -44,9 +39,9 @@ const Site = () => {
     :   (<div>
             <TopBar handler={scrollHandler} refs={refs} />
             <WelcomeMessage />
-            <About refLink={aboutRef} />
+            <About images={[]} refLink={aboutRef} />
             <Technologies refLink={technologiesRef} />
-            <Projects refLink={projectRef} />
+            <Projects projects={projects} refLink={projectRef} />
             <Contact refLink={contactRef} />
         </div>);
 }

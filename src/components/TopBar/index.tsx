@@ -1,16 +1,13 @@
-import './style.css';
-import Logo from './../logo';
-import About from './graphics/name.svg'
-import Technologies from './graphics/settings.svg'
-import Projects from './graphics/visibility.svg'
-import Contact from './graphics/envelope.svg'
-import {useIsComponentScrolled} from './hooks';
-import { useState, RefObject } from 'react';
-import {refObj} from '../Site'
-interface Props {
-    refs: refObj,
-    handler: Function
-}
+import "./style.css";
+import Logo from "./../logo";
+import About from "./graphics/name.svg";
+import Technologies from "./graphics/settings.svg";
+import Projects from "./graphics/visibility.svg";
+import Contact from "./graphics/envelope.svg";
+import {useIsComponentScrolled} from "./hooks";
+import { useState } from "react";
+import {TopBarProps as Props} from "../../helpers/interfaces";
+
 
 const TopBar = ({refs, handler}: Props) => {
     const isScrolled: boolean = useIsComponentScrolled(window.screen.height*0.01);

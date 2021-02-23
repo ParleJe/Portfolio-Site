@@ -1,10 +1,7 @@
-import './style.css';
-import TechIcons from '../TechIcons';
-import { RefObject } from 'react';
+import "./style.css";
+import TechIcons from "../TechIcons";
+import {DefaultProps as Props} from "../../helpers/interfaces";
 
-interface Props {
-    refLink: RefObject<any>
-}
 
 const Technologies = ({refLink}:Props) => {
     return (
