@@ -128,6 +128,7 @@ button:hover {
 }
 
 .first-panel {
+    box-sizing: border-box;
     padding-block-start: 0;
 }
 
@@ -161,7 +162,7 @@ button:hover {
     }
 
     form {
-        height: 60%;
+        height: 90%;
     }
 
     button {
