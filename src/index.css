@@ -170,6 +170,6 @@ button:hover {
     }
 
     .first-panel {
-        padding-block-start: 15vh;
+        padding-block-start: 15vmax;
     }
 }
