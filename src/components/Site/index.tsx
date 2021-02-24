@@ -8,8 +8,7 @@ import LandingSite from "../LandingSite";
 import WelcomeMessage from "../WelcomeMessage";
 import {RefLinksObj, SiteProps} from "../../helpers/interfaces";
 
-
-const Site = ({projects}: SiteProps) => {
+const Site = ({projects, about, techDesc, welcome, contact}: SiteProps) => {
     const [isLoaded, setIsLoaded] = useState<boolean>(false);
     const projectRef = useRef<RefObject<any>>(null);
     const aboutRef = useRef<RefObject<any>>(null);
@@ -38,11 +37,11 @@ const Site = ({projects}: SiteProps) => {
         </div>)
     :   (<div>
             <TopBar handler={scrollHandler} refs={refs} />
-            <WelcomeMessage />
-            <About images={[]} refLink={aboutRef} />
-            <Technologies refLink={technologiesRef} />
+            <WelcomeMessage text={welcome} />
+            <About text={about} images={[]} refLink={aboutRef} />
+            <Technologies text={techDesc} refLink={technologiesRef} />
             <Projects projects={projects} refLink={projectRef} />
-            <Contact refLink={contactRef} />
+            <Contact data={contact} refLink={contactRef} />
         </div>);
 }
 

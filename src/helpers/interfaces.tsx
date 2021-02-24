@@ -2,7 +2,17 @@ import { RefObject } from 'react';
 import {Project} from './classes'
 
 export interface SiteProps {
-    projects: Project[]
+    projects: Project[],
+    techDesc: string[],
+    about: string[],
+    welcome: string[],
+    contact: contactObject;
+}
+
+interface contactObject {
+    git: string,
+    linkedin: string,
+    text: string[]
 }
 
 export interface RefLinksObj {
@@ -28,8 +38,12 @@ export interface LogoProps {
     animate: boolean,
   }
 
-export interface DefaultProps {
-    refLink: RefObject<any>
+interface DefaultProps {
+    refLink?: RefObject<any>,
+}
+
+export interface PropsWithText extends DefaultProps {
+    text: string[]
 }
 
 export interface feedback {
@@ -37,16 +51,25 @@ export interface feedback {
     email: string,
     name: string,
     subject: string,
-    text: string,
-    user: string,
+    content: string,
+    user: string
 }
 
-export interface AboutProps {
-    refLink: RefObject<any>,
+export interface AboutProps extends PropsWithText {
     images: string[]
 }
 
 export interface TopBarProps {
     refs: RefLinksObj,
     handler: Function
+}
+
+export interface ContactProps extends DefaultProps {
+    data: ContactObject
+}
+
+interface ContactObject {
+    text: string[],
+    git: string,
+    linkedin: string
 }

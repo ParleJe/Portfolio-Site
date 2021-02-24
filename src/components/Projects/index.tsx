@@ -19,7 +19,7 @@ const Projects = ({refLink, projects}: ProjectProps) => {
                 {projects.map(project => {
                     return (
                             <div className="small-project">
-                                <ProjectCard imgs={project.photos} techs={project.techs} description={project.description} name={project.title} />
+                                <ProjectCard git={project.link} imgs={project.photos} techs={project.techs} description={project.description} name={project.title} />
                             </div>    
                         )
                 })}

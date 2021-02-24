@@ -4,8 +4,10 @@ import {FormEvent, useState, useEffect} from 'react';
 import {useInView} from 'react-intersection-observer';
 import Logo from '../logo';
 import {env} from '../../config'
-import {DefaultProps as Props, feedback} from '../../helpers/interfaces';
-
+import {ContactProps as Props, feedback} from '../../helpers/interfaces';
+import PhotoDisplay from '../PhotoDisplay';
+import github from "../../technologyIcons/github.svg";
+import linkedin from "../../technologyIcons/linkedin.svg";
 declare const window: any;
 
 const sendFeedback = async ({
@@ -13,7 +15,7 @@ const sendFeedback = async ({
     email,
     name,
     subject,
-    text,
+    content,
     user,
 }: feedback) => {
     window.emailjs.send(
@@ -23,18 +25,18 @@ const sendFeedback = async ({
             name,
             email,
             subject,
-            text,
+            content,
         },
         user
         )
         .catch(() => { alert('An error has occured. Please try again')});
     };
 
-const Contact = ({refLink}: Props) => {
+const Contact = ({refLink, data}: Props) => {
     const [name, setName] = useState<string>('')
     const [email, setEmail] = useState<any>('')
     const [subject, setSubject] = useState<string>('')
-    const [text, setText] = useState<string>('')
+    const [content, setContent] = useState<string>('')
     const { ref, inView } = useInView({
         threshold: 0.25
     })
@@ -53,13 +55,13 @@ const Contact = ({refLink}: Props) => {
             email,
             name,
             subject,
-            text,
+            content,
             user
         })
         setName("");
         setEmail("");
         setSubject("");
-        setText("");
+        setContent("");
     };
 
     useEffect( () => {
@@ -69,11 +71,16 @@ const Contact = ({refLink}: Props) => {
     return (
         <div ref={refLink} className="main-component" style={{opacity: opacity, transition: '1s'}}>
             <h1 className="segment-title">Contact me</h1>
-            <div ref={ref} className="bigger-panel first-panel">
-                <p className="contact-paragraph">bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            <div ref={ref} className="bigger-panel first-panel contact-padding" >
+                <p className="contact-paragraph">{data.text}</p>
+                <div className="social-links-container" >
+                    <a className="social-link" href={data.git}>
+                        <PhotoDisplay images={[github]} round={true} transitionTime={null} />
+                    </a>
+                    <a className="social-link" href={data.linkedin}>
+                        <PhotoDisplay images={[linkedin]} round={true} transitionTime={null} />
+                    </a>
+                </div>
                 <div className="contact-logo-container">
                     <Logo rotate={false} animate={true} />
                 </div>
@@ -85,7 +92,7 @@ const Contact = ({refLink}: Props) => {
                         <input id='name' name='name' type='text' placeholder='Name' required={true} value={name} onChange={(e) => setName(e.target.value)} />
                         <input id='email' name='email' type='email' placeholder='Email' required={true} value={email} onChange={(e) => setEmail(e.target.value)} />
                         <input id='subject' name='subject' type='text' placeholder='Subject' required={true} value={subject} onChange={(e) => setSubject(e.target.value)} />
-                        <textarea id='message' name="text" placeholder='Message' required={true} value={text} onChange={(e) => setText(e.target.value)} />
+                        <textarea id='message' name="text" placeholder='Message' required={true} value={content} onChange={(e) => setContent(e.target.value)} />
                     </div>
                         <button type="submit">Send message!</button>
                 </form>
