@@ -1,26 +1,41 @@
 {
-    "welcome": {
-        "h1": "Hi,",
-        "h2": "I'm Robert",
-        "h3": "22 years old IT student"
-    },
-    "about": "Hi again, currently I'm full time IT student on Cracow University of Technology, in my third year. Until now I have developed crucial programming skills in various fields, but I have fell in love especially with front-end and back-end programming.Well-organised person with heart of prefectionist, problem solver, independent in work with high attention to detail. Fan of tech, sports (especially tenis and skiing) and, recently, philosophical books.I am currently looking for my first full-time job as a Junior Web / Frontend Developer, or Internship.",
-    "skills": {
-        "h1": "I'm kind of person that wants to know everything, googling solutions doesn't satify my until I get to know why and how it works. Such perfecionist approach... . ",
-        "h2": "I have started my programming journey with Java language, which helped me develop programming thinking alongside OOP skills. Next came PHP and JavaScript, which are currently my toGO programming langages",
-        "h3": "I am not afraid of system’s terminal, in fact my addiction to it grows every day.",
-        "h4": "Currently, I'm hard learning ReactJS framework, TypeScript, and polishing my Node.js skills "
-    },
+    "welcome": [
+        "Hi,",
+        "I'm Robert",
+        "22 years old IT student"
+    ],
+    "about": [
+        "Hi again, currently I'm full time IT student on Cracow University of Technology, in my third year.", 
+        "Until now I have developed crucial programming skills in various fields, but I have fell in love especially with front-end and back-end programming.",
+        "Well-organised person with heart of prefectionist, problem solver, independent in work with high attention to detail. ",
+        "Fan of tech, sports (especially tenis and skiing) and, recently, philosophical books.I am currently looking for my first full-time job as a Junior Web / Frontend Developer, or Internship."
+    ],
+    "skills": [
+        "I'm kind of person that wants to know everything, googling solutions doesn't satify my until I get to know why and how it works. Such perfecionist approach... . ",
+        "I have started my programming journey with Java language, which helped me develop programming thinking alongside OOP skills. Next came PHP and JavaScript, which are currently my toGO programming langages",
+        "I am not afraid of system’s terminal, in fact my addiction to it grows every day.",
+        "Currently, I'm hard learning ReactJS framework, TypeScript, and polishing my Node.js skills "
+    ],
     "projects": [
         {
-            "title": "project Vulpes",
+            "title": "Project Vulpes",
             "description": "A web app created for planning trips with friends. There is possibility of creating, setting, deleting trips and chating with friends. Backend was created in plain PHP 8.0 accompanied with HTML and CSS on frontend side",
-            "git": "https://github.com/ParleJe/Internet_App"
+            "git": "https://github.com/ParleJe/Internet_App",
+            "imgs":[
+                "../../projectGraphics/Vulpes/Vulp-1.png",
+                "../../projectGraphics/Vulpes/Vulp-2.png",
+                "../../projectGraphics/Vulpes/Vulp-3.png"
+            ]
         },
         {
             "title": "Dots And Boxes",
             "description": "Android version of popular game \"Dots and Boxes\"",
-            "git": "https://github.com/ParleJe/DotsAndBoxes"
+            "git": "https://github.com/ParleJe/DotsAndBoxes",
+            "imgs":[
+                "./projectGraphics/DotsAndBoxes/DAB-1",
+                "./projectGraphics/Vulpes/DAB-2",
+                "./projectGraphics/Vulpes/DAB-3"
+            ]
         },
         {
             "title": "War Game",
@@ -31,7 +46,7 @@
     "contact": {
         "git": "https://www.github.com/parleJe",
         "linkedin": "",
-        "h1": "I am interested in job/intership opportunities. However, if you have other request or question, don’t hesitate to contact me using below form either."
+        "text": ["I am interested in job/intership opportunities. However, if you have other request or question, don’t hesitate to contact me using below form either."]
     }
 }
 
