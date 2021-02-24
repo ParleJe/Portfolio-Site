@@ -8,13 +8,13 @@
 
 .img-card-container {
     width: 100%;
-    height: 60%;
+    height: 70%;
     margin-bottom: 2em;
 }
 
 .description-card-container {
     width: 100%;
-    height: 35%;
+    height: 25%;
     display: flex;
     flex-direction: column;
 }
@@ -28,23 +28,31 @@
 }
 
 .card-header {
-    height:40%;
+    height:100%;
     width: 100%;
 
     display: flex;
 }
 
+.card-header a {
+    width: 90%;
+    height: 100%;
+}
+
 .card-header h1 {
+    font-size: 1.5em;
     margin-block-end: 0;
     margin-inline-end: 0.5em;
 }
 
 .tech-outer-container {
+    justify-self: flex-end;
     width: 2em;
     height: 2em;
 }
 
 .description-card-container p {
+    align-self: flex-end;
     width: 100%;
     height: 60%;
 

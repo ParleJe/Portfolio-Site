@@ -57,3 +57,23 @@
 .contact-paragraph {
     width: 60%;
 }
+
+.social-links-container {
+    width: 100%;
+    height: 4vmax;
+
+    display: flex;
+    gap: 2vmax;
+    margin-top: 2vmax;
+    box-sizing: border-box;
+    padding-inline-start: 22%;
+}
+
+.social-link {
+    width: 4vmax;
+    height: 4vmax;
+}
+
+.contact-padding {
+    padding-block-start: 15vh;
+}
