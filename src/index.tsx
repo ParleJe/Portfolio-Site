@@ -4,8 +4,6 @@ import './index.css';
 import Site from './components/Site';
 import reportWebVitals from './reportWebVitals';
 import {Project} from './helpers/classes';
-import img1 from './projectGraphics/graph-1.jpg';
-import img2 from './projectGraphics/graph-2.jpg';
 import php from './technologyIcons/php.svg';
 import js from './technologyIcons/javascript.svg';
 import css from './technologyIcons/css.svg';
@@ -22,9 +20,9 @@ import dab3 from "./projectGraphics/DotsAndBoxes/DAB-3.jpg";
 
 
 const projects: Project[] = [];
-projects.push(new Project(data.projects[0].title, [vulp1, vulp2, vulp3], data.projects[0].description, [php, js, css, html], data.projects[0].git))
 projects.push(new Project(data.projects[1].title, [dab1, dab2, dab3], data.projects[1].description, [kotlin], data.projects[1].git))
-projects.push(new Project(data.projects[2].title, [img1, img2], data.projects[2].description, [java], data.projects[2].git))
+projects.push(new Project(data.projects[0].title, [vulp1, vulp2, vulp3], data.projects[0].description, [php, js, css, html], data.projects[0].git))
+projects.push(new Project(data.projects[2].title, [], data.projects[2].description, [java], data.projects[2].git))
 
 
 ReactDOM.render(
