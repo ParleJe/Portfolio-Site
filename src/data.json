@@ -5,13 +5,13 @@
         "22 years old IT student"
     ],
     "about": [
-        "Hi again, currently I'm full time IT student on Cracow University of Technology, in my third year.", 
+        "Hello there👋 , currently I'm full time IT student on Cracow University of Technology, in my third year.", 
         "Until now I have developed crucial programming skills in various fields, but I have fell in love especially with front-end and back-end programming.",
-        "Well-organised person with heart of prefectionist, problem solver, independent in work with high attention to detail. ",
-        "Fan of tech, sports (especially tenis and skiing) and, recently, philosophical books.I am currently looking for my first full-time job as a Junior Web / Frontend Developer, or Internship."
+        "Well-organised person with heart of perfectionist, problem solver, independent in work with high attention to details. ",
+        "Fan of tech, sports (especially tenis and athletics) and, recently, philosophical books.I am currently looking for my first full-time job as a Junior Web / Frontend Developer, or Internship."
     ],
     "skills": [
-        "I'm kind of person that wants to know everything, googling solutions doesn't satify my until I get to know why and how it works. Such perfecionist approach... . ",
+        "I'm kind of person that wants to know everything, googling solutions doesn't satify my until I get to know why and how it works. Such perfecionist approach allows me to, day by day, learn new methods and technologies. ",
         "I have started my programming journey with Java language, which helped me develop programming thinking alongside OOP skills. Next came PHP and JavaScript, which are currently my toGO programming langages",
         "I am not afraid of system’s terminal, in fact my addiction to it grows every day.",
         "Currently, I'm hard learning ReactJS framework, TypeScript, and polishing my Node.js skills "
@@ -19,7 +19,7 @@
     "projects": [
         {
             "title": "Project Vulpes",
-            "description": "A web app created for planning trips with friends. There is possibility of creating, setting, deleting trips and chating with friends. Backend was created in plain PHP 8.0 accompanied with HTML and CSS on frontend side",
+            "description": "•A web app created for planning trips with friends. There is possibility of creating, setting, deleting trips and chatting with friends. Backend was created in plain PHP 8.0 accompanied with HTML and CSS on Frontend with original design. Data is stored in postgreSQL database.",
             "git": "https://github.com/ParleJe/Internet_App",
             "imgs":[
                 "../../projectGraphics/Vulpes/Vulp-1.png",
@@ -29,7 +29,7 @@
         },
         {
             "title": "Dots And Boxes",
-            "description": "Android version of popular game \"Dots and Boxes\"",
+            "description": "Android version of popular game \"Dots and Boxes\" for 2 players. Board size is customizable. All settings are stored on phone.",
             "git": "https://github.com/ParleJe/DotsAndBoxes",
             "imgs":[
                 "./projectGraphics/DotsAndBoxes/DAB-1",
@@ -45,8 +45,8 @@
     ],
     "contact": {
         "git": "https://www.github.com/parleJe",
-        "linkedin": "",
-        "text": ["I am interested in job/intership opportunities. However, if you have other request or question, don’t hesitate to contact me using below form either."]
+        "linkedin": "https://www.linkedin.com/in/robert-kozik",
+        "text": ["I am interested in job/intership opportunities. However, if you have other request or question, don’t hesitate to contact me using this form either."]
     }
 }
 
