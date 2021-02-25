@@ -7,7 +7,7 @@ import {AboutProps as Props} from "../../helpers/interfaces"
 const images: Array<string> = [Graphic1, Graphic2];
 
 
-const About = ({refLink}: Props) => {
+const About = ({refLink, text}: Props) => {
   
   return (
     <div ref={refLink} className="main-component">
@@ -18,9 +18,9 @@ const About = ({refLink}: Props) => {
         </div>
       </div>
       <div className="bigger-panel">
-        <p>Hi again, currently I'm full time IT student on Cracow University of Technology, in my third year. <br/><br/>
-Until now I have developed crucial programming skills in various fields, but I have fell in love especially with front-end and back-end programming.<br/><br/>
-Well-organised person with heart of prefectionist, problem solver, independent in work with high attention to detail. Fan of tech, sports (especially tenis and skiing) and, recently, philosophical books.
+        <p>{text.map(line => {
+          return (<p>{line}</p>)
+        })}
         </p>
       </div>
     </div>
