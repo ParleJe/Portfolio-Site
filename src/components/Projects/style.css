@@ -7,11 +7,13 @@
     grid-template: 100%/repeat(3,1fr);
     grid-auto-flow: column;
     position: relative;
+    box-sizing: border-box;
+    padding-block-start: 15vh;
 }
 
 .small-project {
     width: 65%;
-    height: 90%;
+    height: 80%;
     min-width: 25vw;
     margin: auto
 }
