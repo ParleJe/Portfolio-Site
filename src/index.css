@@ -155,6 +155,11 @@ button:hover {
     button {
         font-size: 0.6em;
     }
+
+    .first-panel {
+        box-sizing: border-box;
+        padding-block-start: 15vmax;
+    }
 }
 
 @media only screen and (max-width:801px) and (orientation: portrait) {
