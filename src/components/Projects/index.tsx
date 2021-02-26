@@ -14,9 +14,9 @@ const Projects = ({refLink, projects}: ProjectProps) => {
     
 
     return (
-        <div className="main-component" ref={ref}>
+        <div className="main-component" ref={ref} style={{opacity: inView?1:0.1, transition: '1s'}}>
             <h1 className="segment-title">Projects</h1>
-            <div className="projects first-panel" ref={refLink} style={{opacity: inView?1:0.1, transition: '1s', paddingBlockStart: '15vh'}}>
+            <div className="projects" ref={refLink} >
                 {projects.map((project:Project, index:number) => {
                     return (
                             <div key={index} className="small-project">

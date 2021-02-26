@@ -1,6 +1,6 @@
 
 import './style.css';
-import {FormEvent, useState, useEffect} from 'react';
+import {FormEvent, useState} from 'react';
 import {useInView} from 'react-intersection-observer';
 import Logo from '../logo';
 import {env} from '../../config'
@@ -38,9 +38,8 @@ const Contact = ({refLink, data}: Props) => {
     const [subject, setSubject] = useState<string>('')
     const [content, setContent] = useState<string>('')
     const { ref, inView } = useInView({
-        threshold: 0.25
+        threshold: 0.5
     })
-    const [opacity, setOpacity] = useState(0);
 
     const onSubmit = (event: FormEvent) => {
         event.preventDefault()
@@ -63,13 +62,9 @@ const Contact = ({refLink, data}: Props) => {
         setSubject("");
         setContent("");
     };
-
-    useEffect( () => {
-            setOpacity(inView?1:0)
-    },[inView])
     
     return (
-        <div ref={refLink} className="main-component" style={{opacity: opacity, transition: '1s'}}>
+        <div ref={refLink} className="main-component" style={{opacity: inView?1:0.1, transition: '1s'}}>
             <h1 className="segment-title">Contact me</h1>
             <div ref={ref} className="bigger-panel first-panel contact-padding" >
                 <p className="contact-paragraph">{data.text}</p>
