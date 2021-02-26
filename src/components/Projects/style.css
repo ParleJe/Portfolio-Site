@@ -43,3 +43,13 @@
         box-sizing: border-box;
     }
 }
+
+@media only screen and (max-height:401px) and (orientation: landscape) {
+    .small-project {
+        min-width: 55vw;
+    }
+
+    .projects {
+        grid-template: 100%/repeat(3,60vw);
+    }
+}

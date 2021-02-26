@@ -26,6 +26,7 @@ body {
     
     background: #fffbf5;
 
+    box-sizing: border-box;
     position: relative;
     overflow: hidden;
 }
@@ -132,7 +133,55 @@ button:hover {
     padding-block-start: 0;
 }
 
-@media only screen and (max-width: 801px), only screen and (max-device-width: 801px) {
+@media only screen  and (max-height:400px) and (orientation: landscape) {
+    h1 {
+        font-size: 1.2em;
+        margin-block-end: 0.2em;
+    }
+
+    p {
+        font-size: 0.8em;
+        width: 97%;
+    }
+
+    .segment-title {
+        font-size: 1.2em;
+    }
+
+    form {
+        height: 70%;
+    }
+
+    button {
+        font-size: 0.6em;
+    }
+
+    .first-panel {
+        box-sizing: border-box;
+        padding-block-start: 15vmax;
+    }
+}
+
+@media only screen and (max-width:801px) and (orientation: portrait) {
+    .main-component {
+        flex-direction: column;
+    }
+
+    .bigger-panel {
+        width: 100%;
+        height: 60%;
+    }
+
+    .smaller-panel {
+        width: 100%;
+        height: 40%;
+    }
+
+    .first-panel {
+        box-sizing: border-box;
+        padding-block-start: 15vmax;
+    }
+
     h1 {
         font-size: 1.5em;
         margin-block-end: 0.2em;
@@ -153,26 +202,5 @@ button:hover {
 
     button {
         font-size: 0.8em;
-    }
-
-}
-
-@media only screen and (max-width:801px) and (orientation: portrait){
-    .main-component {
-        flex-direction: column;
-    }
-
-    .bigger-panel {
-        width: 100%;
-        height: 60%;
-    }
-
-    .smaller-panel {
-        width: 100%;
-        height: 40%;
-    }
-
-    .first-panel {
-        padding-block-start: 15vmax;
     }
 }
