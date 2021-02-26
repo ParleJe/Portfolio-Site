@@ -73,3 +73,22 @@
     
     font-size: 1em;
 }
+
+@media only screen and (max-width:801px) and (orientation: landscape) {
+    .card {
+        display: flex;
+    }
+
+    .img-card-container {
+        height: 100%;
+        width: 45%;
+        padding-inline-end: 5%;
+
+        padding-bottom: 0;
+    }
+
+    .description-card-container {
+        height: 100%;
+        width: 50%;
+    }
+}

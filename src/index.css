@@ -132,21 +132,7 @@ button:hover {
     padding-block-start: 0;
 }
 
-@media only screen and (max-width:801px), only screen and (max-device-width:801px) {
-    .main-component {
-        flex-direction: column;
-    }
-
-    .bigger-panel {
-        width: 100%;
-        height: 60%;
-    }
-
-    .smaller-panel {
-        width: 100%;
-        height: 40%;
-    }
-
+@media only screen and (max-width: 801px), only screen and (max-device-width: 801px) {
     h1 {
         font-size: 1.5em;
         margin-block-end: 0.2em;
@@ -167,6 +153,23 @@ button:hover {
 
     button {
         font-size: 0.8em;
+    }
+
+}
+
+@media only screen and (max-width:801px) and (orientation: portrait){
+    .main-component {
+        flex-direction: column;
+    }
+
+    .bigger-panel {
+        width: 100%;
+        height: 60%;
+    }
+
+    .smaller-panel {
+        width: 100%;
+        height: 40%;
     }
 
     .first-panel {
