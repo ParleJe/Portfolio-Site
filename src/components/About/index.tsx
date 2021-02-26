@@ -18,8 +18,8 @@ const About = ({refLink, text}: Props) => {
         </div>
       </div>
       <div className="bigger-panel">
-        <p>{text.map(line => {
-          return (<p>{line}</p>)
+        <p>{text.map((line,index) => {
+          return (<span key={index}>{line}<br/><br/></span>)
         })}
         </p>
       </div>

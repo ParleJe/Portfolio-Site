@@ -7,15 +7,9 @@ const WelcomeMessage = ({text}: Props) => {
         <div className="main-component first-tab">
             <div className="welcome-header">
                 {text.map((line:string, index:number) => {
-                    if(index === text.length-1) return (<h2>{line}</h2>)
-                    return(<h1>{line}</h1>)
+                    if(index === text.length-1) return (<h2 key={index}>{line}</h2>)
+                    return(<h1 key={index}>{line}</h1>)
                 })}
-                
-                {/* <h1>Hi,</h1>
-                    <h1>I'm Robert</h1>
-                <h2>
-                    22 years old IT student
-                </h2> */}
             </div>
             <div className="welcome-outer-logo">
                 <Logo rotate={false} animate={true} />

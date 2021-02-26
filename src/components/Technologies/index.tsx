@@ -8,11 +8,11 @@ const Technologies = ({refLink, text}:Props) => {
         <div ref={refLink} className="main-component">
             <h1 className="segment-title">Technologies</h1>
             <div className="smaller-panel first-panel">
-                
-                    {text.map((line:string) => {
-                        return(<p>{line}</p>)
+                <p>
+                    {text.map((line:string, index:number) => {
+                        return(<span key={index}>{line}<br/></span>)
                     })}        
-
+                </p>
             </div>
             <div className="bigger-panel">
                 <TechIcons />
