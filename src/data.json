@@ -19,7 +19,7 @@
     "projects": [
         {
             "title": "Project Vulpes",
-            "description": "•A web app created for planning trips with friends. There is possibility of creating, setting, deleting trips and chatting with friends. Backend was created in plain PHP 8.0 accompanied with HTML and CSS on Frontend with original design. Data is stored in postgreSQL database.",
+            "description": "Web app for planning trips with friends. There is possibility of creating, setting, deleting trips and chatting with friends. Backend was created in plain PHP 8.0, with HTML and CSS on Frontend with original design. Data is stored in postgreSQL database.",
             "git": "https://github.com/ParleJe/Internet_App",
             "imgs":[
                 "../../projectGraphics/Vulpes/Vulp-1.png",
