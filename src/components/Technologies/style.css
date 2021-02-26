@@ -1,0 +1,7 @@
+.tech {
+    height: 90vh;
+    width: 100vw;
+    border-bottom: 2px solid black;
+    display: flex;
+
+}

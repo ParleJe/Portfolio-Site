@@ -1,0 +1,77 @@
+
+
+.contact-logo-container {
+    width: 14vmin;
+    height: 14vmin;
+
+    margin: 10%;
+}
+
+.form-grid {
+    height: 80%;
+    display: grid;
+    grid-template: repeat(5,1fr)/repeat(2,1fr);
+    gap: 0.5em;
+    padding-bottom: 1em;
+}
+
+.form-grid input,textarea {
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    width: 100%;
+    
+    background-color: #f2ebe1;
+    
+    font-weight: 500;
+    
+    border: none;
+    outline: none;
+}
+
+.form-grid input:focus,textarea:focus {
+    border-bottom: 2px solid red;
+    margin-bottom: -2px;
+    transition: 100ms ;
+}
+
+::placeholder {
+    color: black;
+    font-weight: 500;
+}
+
+#subject {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#message {
+    resize: none;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+.contact-paragraph {
+    width: 60%;
+}
+
+.social-links-container {
+    width: 100%;
+    height: 4vmax;
+
+    display: flex;
+    margin-top: 2vmax;
+    box-sizing: border-box;
+    padding-inline-start: 22%;
+}
+
+.social-link {
+    width: 4vmax;
+    height: 4vmax;
+    margin-inline-end: 2vmax
+}
+
+.contact-padding {
+    padding-block-start: 15vh;
+}

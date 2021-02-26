@@ -1,0 +1,23 @@
+.tech-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-layout {
+    height: 35vmax;
+    width: 35vmax;
+    display: grid;
+
+    grid-template: repeat(3,30%)/repeat(3,30%);
+    gap: 5%;
+    
+}
+
+@media only screen and (max-width:801px), only screen and (max-device-width:801px) {
+    .grid-layout {
+        height: 45vmax;
+        width: 45vmax;
+    }
+}

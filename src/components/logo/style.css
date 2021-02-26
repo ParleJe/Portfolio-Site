@@ -1,0 +1,53 @@
+.logo-container {
+    width: inherit;
+    height: inherit;
+
+    display: grid;
+    grid-template: repeat(3,30%)/repeat(3,30%);
+    grid-gap: 5%;
+    transition-delay: 1s;
+    position: absolute;
+}
+
+.animate {
+    animation:  anima 4s infinite alternate-reverse linear;
+}
+
+@keyframes anima {
+    0% {transform: scale(1) rotate(0deg);}
+    20% {transform: scale(1.2) rotate(72deg);}
+    40% {transform: scale(1) rotate(144deg);}
+    60% {transform: scale(1.2) rotate(216deg);}
+    80% {transform: scale(1) rotate(288deg);}
+    100% {transform: scale(1.2) rotate(360deg);}
+}
+
+.small-square {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    background-color: black;
+}
+
+.font-color {
+    background-color: black;
+    
+}
+
+.highlight3-color {
+    background-color: #D7EDFA;
+}
+
+.highlight2-color {
+    background-color: #7298AD;
+}
+
+.highlight1-color {
+    background-color: #f3316b;
+    /*#de5d83*/
+}
+
+.background-color{
+    background-color: #AEF2C5;
+}
+

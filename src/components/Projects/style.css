@@ -1,0 +1,45 @@
+.projects {
+    height: 100vh;
+    width: 100vw;
+
+    overflow: auto;
+    display: grid;
+    grid-template: 100%/repeat(3,1fr);
+    grid-auto-flow: column;
+    position: relative;
+    box-sizing: border-box;
+    padding-block-start: 15vh;
+}
+
+.small-project {
+    width: 65%;
+    height: 80%;
+    min-width: 25vw;
+    margin: auto
+}
+
+.big-project {
+    width: 80%;
+    height: 70%;
+    min-width: 30vw;
+    margin: auto;
+}
+
+@media only screen and (max-width:801px), only screen and (max-device-width:801px) {
+    .small-project {
+        height: 90%;
+        min-width: 80vw;
+    }
+
+    .big-project {
+        height: 90%;
+        min-width: 80vw;
+    }
+
+    .projects {
+        gap: 2em;
+        padding-inline-start: 2em;
+        padding-inline-end: 2em;
+        box-sizing: border-box;
+    }
+}

@@ -1,18 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-weight: 300;
+
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: auto;
+    background-color: #FFFBF5;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-#root {
-    background: white;
-    display: flex;
-    flex-direction: column;
+.main-component {
     width: 100vw;
     height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+    
+    background: #fffbf5;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.first-tab {
+    padding-block-start: 10vh;
+    box-sizing: border-box;
+}
+
+.right-panel {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smaller-panel, .bigger-panel {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: #f3316b;
+    margin-block-end: 1.6em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.2em;
+    width: 80%;
+}
+
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    width: 50%;
+    color: #7298AD;
+    font-size: 0.7em;
+    margin-block-start: 2.5em;
+}
+
+.segment-title::first-letter {
+    color: aquamarine;
+}
+
+p,h1,h2 {
+    box-sizing: border-box;
+    padding-inline-start: 2%;
+    text-decoration-color: aquamarine;
+    overflow: auto;
+}
+
+form {
+    width: 70%;
+    height: 40%;
+}
+
+button {
+    width: 40%;
+    height: 15%;
+    
+    font-size: 1.2em;
+    font-weight: 600;
+
+    background: transparent;
+    border: 1px solid #7298AD;
+    color: #7298AD;
+
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #7298AD;
+    color: white;
+}
+
+.segment-title {
+    position: absolute;
+    top: 10vh;
+    left: 5%;
+
+    font-size: 3em;
+    font-weight: 800;
+    text-decoration: overline aquamarine;
+}
+
+.unset-pos {
+    position: unset;
+}
+
+.first-panel {
+    box-sizing: border-box;
+    padding-block-start: 0;
+}
+
+@media only screen and (max-width: 801px), only screen and (max-device-width: 801px) {
+    h1 {
+        font-size: 1.5em;
+        margin-block-end: 0.2em;
+    }
+
+    p {
+        font-size: 1em;
+        width: 98%;
+    }
+
+    .segment-title {
+        font-size: 1.5em;
+    }
+
+    form {
+        height: 90%;
+    }
+
+    button {
+        font-size: 0.8em;
+    }
+
+}
+
+@media only screen and (max-width:801px) and (orientation: portrait){
+    .main-component {
+        flex-direction: column;
+    }
+
+    .bigger-panel {
+        width: 100%;
+        height: 60%;
+    }
+
+    .smaller-panel {
+        width: 100%;
+        height: 40%;
+    }
+
+    .first-panel {
+        padding-block-start: 15vmax;
+    }
 }
