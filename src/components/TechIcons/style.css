@@ -15,9 +15,16 @@
     
 }
 
-@media only screen and (max-width:801px), only screen and (max-device-width:801px) {
+@media only screen and (max-width:801px) and (orientation: portrait) {
     .grid-layout {
         height: 45vmax;
         width: 45vmax;
+    }
+}
+
+@media only screen and (max-height:801px) and (orientation: landscape) {
+    .grid-layout {
+        height: 35vmax;
+        width: 35vmax;
     }
 }
