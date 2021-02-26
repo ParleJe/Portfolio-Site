@@ -18,11 +18,9 @@
 .form-grid input,textarea {
     box-sizing: border-box;
     padding: 0.5em 1em;
-    
-    font-size: 0.8em;
     width: 100%;
     
-    background-color: #ccb596;
+    background-color: #f2ebe1;
     
     font-weight: 500;
     
@@ -63,7 +61,6 @@
     height: 4vmax;
 
     display: flex;
-    gap: 2vmax;
     margin-top: 2vmax;
     box-sizing: border-box;
     padding-inline-start: 22%;
@@ -72,6 +69,7 @@
 .social-link {
     width: 4vmax;
     height: 4vmax;
+    margin-inline-end: 2vmax
 }
 
 .contact-padding {
